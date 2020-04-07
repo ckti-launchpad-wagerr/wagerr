@@ -31,7 +31,7 @@ override_dh_auto_clean:
 # Yea, autogen should be run on the source archive, but I like doing git archive
 override_dh_auto_configure:
 	./autogen.sh
-	./configure --enable-reduce-exports --disable-ccache --disable-debug --disable-shared --enable-cxx --with-pic --with-boost-libdir=/usr/lib/${MAKE_HOST}
+	./configure --enable-reduce-exports --disable-ccache --disable-debug --disable-shared --enable-cxx --with-pic --with-boost-libdir=/usr/lib/${MAKE_HOST}  --disable-bench --disable-gui-test --disable-tests
 
 override_dh_auto_build:
 	make -j6
